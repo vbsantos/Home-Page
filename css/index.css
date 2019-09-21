@@ -1,0 +1,154 @@
+:root {
+	/* --cor-1: rgb(235, 69, 0);
+	--cor-2: rgb(185, 29, 0); */
+	--cor-1: rgba(0, 0, 0, 0);
+	--cor-2: rgba(0, 0, 0, 0);
+	--cor-3: rgba(0, 0, 0, 0.3);
+	--dark: #333;
+}
+body {
+	font-family: 'Courier New', Courier, monospace;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: hidden; /* SEM BARRA DE ROLAGEM */
+}
+
+img {
+	-webkit-user-drag: none; /*não arrastar as imagens*/
+}
+
+#centro {
+	width: 80%;
+	height: 75vh;
+	margin: 0% 10% 0% 10%;
+	padding-top: 35vh; 				/*MUDAR*/
+	/* align-items: center; */
+	/* justify-items: center; */
+}
+
+#form {
+	background-color: var(--cor-3);
+	color: white;
+	margin-bottom: 2%;
+	border-style: none;
+	border-radius: 25px;
+	text-align: center;
+	box-shadow: 0 0 0 transparent;
+	/* text-shadow: 0 0 10px black; */
+}
+
+#centro .row {
+	width: 90%;
+	margin-left: 5%;
+	text-align: center;
+}
+
+.search-icon {
+	height: 40px;
+	margin: 5px;
+}
+
+.search-icon:hover {
+	/* height: 50px;
+	margin: 5px; */
+	cursor: pointer;
+}
+
+footer {
+	color: white;
+	text-align: center;
+	font-size: 10px;
+}
+
+footer img {
+	height: 5vh;
+}
+
+/* HIDDEN MENU STUFF */
+
+.wrapper {
+    position: relative;
+	width: 100%;
+	height: 100vh;
+	background: var(--dark);
+}
+
+.canvas {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    transform: translate3d(0);
+	transition: .8s ease all;
+	
+	background-image: url("../img/bg.jpg");
+	background-attachment: fixed;
+	background-position: 48% 0%;
+
+	box-shadow: 0px 0px 10px black;
+	z-index: 0;
+}
+
+.toggle-menu {
+	margin: 10px;
+	width: 30px;
+}
+
+.toggle-menu:hover {
+	margin: 5px;
+	width: 40px;
+	cursor: pointer;
+}
+
+header .navbar {
+	height: 75px;
+	width: 100%;
+	position: absolute;
+	transform: translate3d(-350px, -75px, 0);
+}
+
+.menu {
+	z-index: -1000;
+    height: 95vh;
+    position: absolute;
+	transform: translate3d(-350px, -75px, 0);
+    width: 330px;
+    background: var(--dark);
+	padding: 1rem;
+	margin-top: 80px;
+}
+
+.wrapper.show-menu .canvas {
+	transform: translate3d(350px, 75px, 0);
+}
+
+/* SIDE MENU ITENS */
+
+.side-menu-item {
+	background: #111;
+	padding: 10px;
+	margin: 0px 0px 18px 0px;
+	border-radius: 5px;
+	height: 40px;
+	box-shadow: 0 0 10px black;
+}
+
+.side-menu-item h2{
+	font-size: 14px;
+	margin: auto;
+}
+
+.side-menu-item input {
+	margin: auto;
+}
+
+.side-menu-item img {
+	padding:auto;
+	margin: auto;
+}
+
+/* HEADER */
+.navbar-expand-lg .navbar-nav .nav-link {
+	padding-right: 2rem;
+	padding-left: 2rem;
+}
