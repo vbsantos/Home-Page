@@ -29,12 +29,28 @@ const toInternet = (common_string) => {
 
 const getTime = () => {
     // NEW DATE GETHOUR GETMIN . TO STRING
+    const now = new Date();
+    const hor = now.getHours();
+    const min = now.getMinutes();
+    const sec = now.getSeconds();
+    return hor + ":" + min + ":" + sec;
 }
 
-const addToHistory = (site, search) => {
+const addToHistory = (nome, search, address) => {
     const time = getTime();
-    const string = "[" + time + "] " + site["nome"] + ": \"" + search + "\"";
-    // CRIA AS FLAGS 
+    const string = "[" + time + "] " + nome + ": \"" + search + "\"";
+
+    const menu = document.getElementById("sidemenu2");
+    const item = document.createElement("div");
+    const link = document.createElement("a");
+    link.href = address;
+    const text = document.createElement("p");
+    const content = document.createTextNode(string);
+
+    text.appendChild(content);
+    link.appendChild(text);
+    item.appendChild(link);
+    menu.appendChild(item);
 }
 
 const setAsSearchOption = (site) => {
@@ -51,14 +67,13 @@ const setAsSearchOption = (site) => {
     slot.appendChild(icon);
     searchIcons.appendChild(slot);
     slot.addEventListener("mousedown", function (e) {
-        const link = site["link"];
         const search = get_search();
-        addToHistory(link, search);
         if (search == "") {
-            var address = link[0];
+            var address = site["link"][0];
         }
         else {
-            var address = link[1] + toInternet(search);
+            var address = site["link"][1] + toInternet(search);
+            addToHistory(site["name"], search, address);
         }
         if (e.which == 1) {
             window.location.href = address;
@@ -123,3 +138,5 @@ const makeSideMenuItem = (site) => {
 search_bar.focus();
 
 sites.forEach(makeSideMenuItem);
+
+getTime();

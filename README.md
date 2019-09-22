@@ -24,13 +24,15 @@
 - [x] Criar um objeto com os sites que inclua nome, descrição e endereço 1 e 2
 
 - [ ] Adicionar algumas paginas importantes
-    - [X] IMBd
-    - [X] Reddit
+    - [X] duck duck go
+    - [X] ecosia
 
-- [ ] Melhorar a aparência do header
+- [X] Melhorar a aparência do header
 
 - [ ] Incrementar o header
     - [ ] Histórico
     - [X] Configurar - Sites
-    - [ ] Sobre mim - Eu
-    - [ ] Entre em contato - form
+    - [X] Sobre mim - Eu
+        - [ ] Adicionar redes sociais
+        - [ ] Adicionar links
+    - [X] Entre em contato - form
