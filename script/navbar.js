@@ -1,7 +1,17 @@
+
+// <li id="aba3" class="nav-item">
+//     <p class="nav-link">Contato</p>		<!-- LINK DA NAVBAR -->
+// </li>
+
 const setAbaEvent = (aba) => {
     aba.addEventListener("mousedown", function (e) {
         if (e.which == 1) {
-            console.log("TOGGLE MENU") //se fechado abre, se aberto fecha
+            if (!aba.classList.contain("active")) {
+                aba.classList.add("active");
+                let a = "x";
+                let b = "y";
+                console.log("Troca do menu "+a+" pro menu "+b);   
+            }
         }
     });
 }
@@ -10,8 +20,8 @@ const desseleciona = () => {
 
 }
 
-const seleciona = () => {
-
+const seleciona = (aba) => {
+    aba.classList.add("active");
 }
 
 // ##########################################
