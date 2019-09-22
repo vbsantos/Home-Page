@@ -248,7 +248,17 @@ header .navbar {
 	margin-top: 15px;
 }
 
-#sidemenu4 input:nth-of-type(3) {
+#sidemenu4 button {
 	width: 50%;
 	margin: 0 0 0 25%;
+	color: white;
+	background-color: #111;
+	border-style: none;
+	box-shadow: 0 0 10px black;
+}
+
+#sidemenu4 button:hover {
+	width: 52%;
+	margin: 0 0 0 24%;
+	box-shadow: 0 0 5px black;
 }
