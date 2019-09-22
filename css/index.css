@@ -193,8 +193,8 @@ header .navbar {
 }
 
 #sidemenu3 .foto_lateral {
-	width: 80%;
-	margin-left: 10%;
+	width: 60%;
+	margin-left: 20%;
 	box-shadow: 0 0 10px black;
 	border-radius: 100%;
 }
