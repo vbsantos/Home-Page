@@ -92,8 +92,8 @@ footer img {
 }
 
 .toggle-menu:hover {
-	margin: 5px;
-	width: 40px;
+	margin: 7.5px;
+	width: 35px;
 	cursor: pointer;
 }
 
@@ -121,7 +121,21 @@ header .navbar {
 	transform: translate3d(350px, 75px, 0);
 }
 
-/* SIDE MENU ITENS */
+/* HEADER */
+
+.navbar-expand-lg .navbar-nav .nav-link {
+	margin-right: 2rem;
+	margin-left: 2rem;
+	cursor: pointer; 
+}
+
+.navbar-brand {
+	/* background: white; */
+	padding: 2px; 
+	width: 50px;
+}
+
+/* ABAS LATERAIS */
 
 .side-menu-item {
 	background: #111;
@@ -146,26 +160,29 @@ header .navbar {
 	margin: auto;
 }
 
-/* HEADER */
-
-.navbar-expand-lg .navbar-nav .nav-link {
-	margin-right: 2rem;
-	margin-left: 2rem;
-	cursor: pointer; 
-}
-
-.navbar-brand {
-	/* background: white; */
-	padding: 2px; 
-	width: 50px;
-}
-
-/* ABAS LATERAIS */
-
 /* CONFIGURAÇÔES */
 
-#sidemenu1 {
-	
+#sidemenu1 a {
+	text-decoration: none;
+	color: white;
+}
+
+/* HISTÓRICO */
+
+#sidemenu2 {
+	padding: 0;
+}
+
+#sidemenu2 p {
+	font-size: 14px;
+	padding-left: 15px;
+	margin-bottom: 10px;
+	text-shadow: 0 0 5px black;
+}
+
+#sidemenu2 a {
+	text-decoration: none;
+	color: white;
 }
 
 /* SOBRE MIM */
@@ -193,6 +210,15 @@ header .navbar {
 	font-size: 14px;
 	text-align: justify;
 	letter-spacing: 1.4px;
+}
+
+#sidemenu3 .social img {
+	width: 40px;
+}
+
+#sidemenu3 a {
+	text-decoration: none;
+	color: white;
 }
 
 /* CONTATO */
