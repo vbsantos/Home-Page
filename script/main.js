@@ -9,7 +9,8 @@ const sites = [
     { id: 7, name: "Google Images", description: "Pesquisa Imagens", link: ["https://www.google.com/", "https://www.google.com.br/images?q="], icon: "img/icon_google.png", active: false },
     { id: 8, name: "IMDb", description: "Pesquisa filmes e séries", link: ["https://www.imdb.com/", "https://www.imdb.com/find?ref_=nv_sr_fn&q="], icon: "img/icon_imdb.png", active: true },
     { id: 9, name: "Reddit", description: "Pesquisa subreddits", link: ["https://www.reddit.com/", "https://www.reddit.com/search/?q="], icon: "img/icon_reddit.png", active: false },
-    { id: 10, name: "The Pirate Bay", description: "Pesquisa torrents", link: ["http://thepiratebay.org/", "http://thepiratebay.org/"], icon: "img/icon_thepiratebay.png", active: false }    
+    { id: 10, name: "Ecosia", description: "Pesquisa qualquer coisa plantando árvores", link: ["https://ecosia.org", "https://www.ecosia.org/search?q="], icon: "img/icon_ecosia.png", active: true },
+    { id: 11, name: "Duck Duck Go", description: "Pesquisa qualquer coisa discretamente", link: ["https://duckduckgo.com", "https://duckduckgo.com/?q="], icon: "img/icon_duckduckgo.png", active: true }
 ];
 
 const historico = [
@@ -32,8 +33,8 @@ const getTime = () => {
     const now = new Date();
     const hor = now.getHours();
     const min = now.getMinutes();
-    const sec = now.getSeconds();
-    return hor + ":" + min + ":" + sec;
+    // const sec = now.getSeconds();
+    return hor + ":" + min;
 }
 
 const addToHistory = (nome, search, address) => {
@@ -42,6 +43,7 @@ const addToHistory = (nome, search, address) => {
 
     const menu = document.getElementById("sidemenu2");
     const item = document.createElement("div");
+    // item.classList.add("side-menu-item");
     const link = document.createElement("a");
     link.href = address;
     const text = document.createElement("p");

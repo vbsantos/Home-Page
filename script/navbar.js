@@ -10,9 +10,6 @@ const desativaLinks = (links) => {
 
 const fechaGuia = (aba) => {
     aba.style.display = "none";
-    // if (!aba.classList.contains("hidden")) {
-    //     aba.classList.add("hidden");
-    // }
 }
 
 const fechaGuias = (abas) => {
