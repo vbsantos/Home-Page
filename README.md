@@ -9,10 +9,10 @@
 - [X] Clicar nos icones e não no botão que agora ta invisível
 
 - [X] Adicionar sombra da tela principal no menu e header
-    - [ ] Acho que vou ter que ler de novo como foi feito o menu, talvez tenha algo errado
+    - [ ] ~Acho que vou ter que ler de novo como foi feito o menu, talvez tenha algo errado~
 
 - [X] Opção de abrir as pesquisas em novas guias
-    - [ ] Esse tá difícil, talvez tenha que criar eventos pra cada clic diferente
+    - [X] Esse tá difícil, talvez tenha que criar eventos pra cada clic diferente
 
 - [X] Adicionar menu para adicionar ou remover botões
     - [X] Checklist
@@ -26,7 +26,7 @@
 
 - [ ] Adicionar algumas paginas importantes
     - [X] IMBd
-    - [ ] ThePirateBay
+    - [ ] ~ThePirateBay~
     - [X] Reddit
 
 - [ ] Melhorar a aparência do header
