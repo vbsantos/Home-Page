@@ -19,14 +19,22 @@ const historico = [
 
 const search_bar = document.getElementById("form");
 
-search_bar.focus();
-
 const get_search = () => {
     return search_bar.value;
 }
 
 const toInternet = (common_string) => {
     return common_string.toLowerCase().replace(" ", "%20");
+}
+
+const getTime = () => {
+    // NEW DATE GETHOUR GETMIN . TO STRING
+}
+
+const addToHistory = (site, search) => {
+    const time = getTime();
+    const string = "[" + time + "] " + site["nome"] + ": \"" + search + "\"";
+    // CRIA AS FLAGS 
 }
 
 const setAsSearchOption = (site) => {
@@ -45,6 +53,7 @@ const setAsSearchOption = (site) => {
     slot.addEventListener("mousedown", function (e) {
         const link = site["link"];
         const search = get_search();
+        addToHistory(link, search);
         if (search == "") {
             var address = link[0];
         }
@@ -108,5 +117,9 @@ const makeSideMenuItem = (site) => {
     item.appendChild(icon);
     menu.appendChild(item);
 }
+
+// ##############################################
+
+search_bar.focus();
 
 sites.forEach(makeSideMenuItem);

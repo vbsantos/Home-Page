@@ -1,31 +1,58 @@
+const desativaLink = (link) => {
+    if (link.classList.contains("active")) {
+        link.classList.remove("active");
+    }
+}
 
-// <li id="aba3" class="nav-item">
-//     <p class="nav-link">Contato</p>		<!-- LINK DA NAVBAR -->
-// </li>
+const desativaLinks = (links) => {
+    links.forEach(desativaLink);
+}
 
-const setAbaEvent = (aba) => {
-    aba.addEventListener("mousedown", function (e) {
+const fechaGuia = (aba) => {
+    aba.style.display = "none";
+    // if (!aba.classList.contains("hidden")) {
+    //     aba.classList.add("hidden");
+    // }
+}
+
+const fechaGuias = (abas) => {
+    abas.forEach(fechaGuia);
+}
+
+const ativaLink = (link) => {
+    link.classList.add("active");
+}
+
+const abreGuia = (link) => {
+    const id = link.id;
+    let new_id = id.substring(3, id.length);
+    new_id = "sidemenu" + new_id;
+    console.log("ID DA GUIA QUE DEVE SER ABERTA: " + new_id);
+    const aba = document.getElementById(new_id);
+    aba.style.display = "block";
+}
+
+const setChangeGuideEvent = (link) => {
+    link.addEventListener("mousedown", function (e) {
         if (e.which == 1) {
-            if (!aba.classList.contain("active")) {
-                aba.classList.add("active");
-                let a = "x";
-                let b = "y";
-                console.log("Troca do menu "+a+" pro menu "+b);   
+            let links = document.getElementsByClassName("nav-item");
+            links = [links[0], links[1], links[2], links[3]];
+            let abas = document.getElementsByClassName("menu");
+            abas = [abas[0], abas[1], abas[2], abas[3]];
+
+            if (!link.classList.contains("active")) {
+                desativaLinks(links);
+                fechaGuias(abas);
+                ativaLink(link);
+                abreGuia(link);
             }
         }
     });
 }
 
-const desseleciona = () => {
-
-}
-
-const seleciona = (aba) => {
-    aba.classList.add("active");
-}
-
 // ##########################################
 
-let abas = document.getElementsByClassName("nav-item");
-abas = [abas[0], abas[1], abas[2], abas[3]];
-abas.forEach(setAbaEvent);
+let links = document.getElementsByClassName("nav-item");
+links = [links[0], links[1], links[2], links[3]];
+
+links.forEach(setChangeGuideEvent);

@@ -111,7 +111,7 @@ header .navbar {
     width: 330px;
     background: var(--dark);
 	padding: 4px;
-	margin-top: 80px;
+	margin-top: 75px;
 	color: #777;
 	/* overflow: auto; */
 }
@@ -148,7 +148,80 @@ header .navbar {
 /* HEADER */
 
 .navbar-expand-lg .navbar-nav .nav-link {
-	padding-right: 2rem;
-	padding-left: 2rem;
+	margin-right: 2rem;
+	margin-left: 2rem;
 	cursor: pointer; 
+}
+
+.navbar-brand {
+	/* background: white; */
+	padding: 2px; 
+	width: 50px;
+}
+
+/* ABAS LATERAIS */
+
+/* CONFIGURAÇÔES */
+
+#sidemenu1 {
+	
+}
+
+/* SOBRE MIM */
+
+#sidemenu3 {
+	color: white;
+	padding: 10px 20px 20px 35px;
+}
+
+#sidemenu3 .foto_lateral {
+	width: 80%;
+	margin-left: 10%;
+	box-shadow: 0 0 10px black;
+	border-radius: 100%;
+}
+
+#sidemenu3 h2 {
+	font-size: 24px;
+	text-align: center;
+	font-weight: bold;
+	margin: 20px 0 20px 0;
+}
+
+#sidemenu3 p {
+	font-size: 14px;
+	text-align: justify;
+	letter-spacing: 1.4px;
+}
+
+/* CONTATO */
+
+#sidemenu4 {
+	color: white;
+	padding: 10px 20px 20px 35px;
+}
+
+#sidemenu4 .foto_lateral {
+	width: 40%;
+	margin-left: 30%;
+	box-shadow: 0 0 10px black;
+	border-radius: 100%;
+	margin-bottom: 25px;
+}
+
+#sidemenu4 input {
+	width: 100%;
+	box-shadow: 0 0 10px black;
+	margin-top: 15px;	
+}
+
+#sidemenu4 textarea {
+	height: 200px;
+	box-shadow: 0 0 10px black;
+	margin-top: 15px;
+}
+
+#sidemenu4 input:nth-of-type(3) {
+	width: 50%;
+	margin: 0 0 0 25%;
 }
