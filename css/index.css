@@ -1,11 +1,7 @@
 :root {
-	/* --cor-1: rgb(235, 69, 0);
-	--cor-2: rgb(185, 29, 0); */
-	--cor-1: rgba(0, 0, 0, 0);
-	--cor-2: rgba(0, 0, 0, 0);
-	--cor-3: rgba(0, 0, 0, 0.3);
 	--dark: #333;
 }
+
 body {
 	font-family: 'Courier New', Courier, monospace;
 	margin: 0;
@@ -28,7 +24,7 @@ img {
 }
 
 #form {
-	background-color: var(--cor-3);
+	background-color: rgba(0, 0, 0, 0.4);
 	color: white;
 	margin-bottom: 2%;
 	border-style: none;
@@ -50,8 +46,8 @@ img {
 }
 
 .search-icon:hover {
-	/* height: 50px;
-	margin: 5px; */
+	height: 50px;
+	margin: 5px;
 	cursor: pointer;
 }
 
@@ -109,13 +105,15 @@ header .navbar {
 
 .menu {
 	z-index: -1000;
-    height: 95vh;
+    height: 100vh;
     position: absolute;
 	transform: translate3d(-350px, -75px, 0);
     width: 330px;
     background: var(--dark);
-	padding: 1rem;
+	padding: 4px;
 	margin-top: 80px;
+	color: #777;
+	/* overflow: auto; */
 }
 
 .wrapper.show-menu .canvas {
@@ -127,7 +125,7 @@ header .navbar {
 .side-menu-item {
 	background: #111;
 	padding: 10px;
-	margin: 0px 0px 18px 0px;
+	margin: 0px 0px 13px 5px;
 	border-radius: 5px;
 	height: 40px;
 	box-shadow: 0 0 10px black;
@@ -148,6 +146,7 @@ header .navbar {
 }
 
 /* HEADER */
+
 .navbar-expand-lg .navbar-nav .nav-link {
 	padding-right: 2rem;
 	padding-left: 2rem;

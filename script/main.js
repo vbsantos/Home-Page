@@ -8,8 +8,14 @@ const sites = [
     { id: 6, name: "Stack Overflow", description: "Pesquisa problemas e soluções relacionadas a programação", link: ["https://pt.stackoverflow.com/", "https://pt.stackoverflow.com/search?q="], icon: "img/icon_stackoverflow.png", active: true },
     { id: 7, name: "Google Images", description: "Pesquisa Imagens", link: ["https://www.google.com/", "https://www.google.com.br/images?q="], icon: "img/icon_google.png", active: false },
     { id: 8, name: "IMDb", description: "Pesquisa filmes e séries", link: ["https://www.imdb.com/", "https://www.imdb.com/find?ref_=nv_sr_fn&q="], icon: "img/icon_imdb.png", active: true },
-    { id: 9, name: "Reddit", description: "Pesquisa subreddits", link: ["https://www.reddit.com/", "https://www.reddit.com/search/?q="], icon: "img/icon_reddit.png", active: false }
+    { id: 9, name: "Reddit", description: "Pesquisa subreddits", link: ["https://www.reddit.com/", "https://www.reddit.com/search/?q="], icon: "img/icon_reddit.png", active: false },
+    { id: 10, name: "The Pirate Bay", description: "Pesquisa torrents", link: ["http://thepiratebay.org/", "http://thepiratebay.org/"], icon: "img/icon_thepiratebay.png", active: false }    
 ];
+
+const historico = [
+    { when: "teste1", what: "teste3", where: "teste2"},
+    { when: "teste4", what: "teste6", where: "teste5"}
+]
 
 const search_bar = document.getElementById("form");
 
@@ -58,11 +64,12 @@ const removeSearchOption = (site) => {
     const searchIcons = document.getElementById("search-options");
     const searchOption = document.getElementById("si" + site["id"]);
     searchIcons.removeChild(searchOption);
+    site["active"] = false;
 }
 
 const makeSideMenuItem = (site) => {
     console.log("Adding side menu item.");
-    const menu = document.getElementById("sidemenu");
+    const menu = document.getElementById("sidemenu1");
     const item = document.createElement("div");
     item.title = site["description"];
     item.classList.add("side-menu-item");
@@ -103,32 +110,3 @@ const makeSideMenuItem = (site) => {
 }
 
 sites.forEach(makeSideMenuItem);
-
-// ########################################################################################################
-
-const googletranslate = "https://translate.google.com/#auto/pt/";
-const google = "https://www.google.com/search?q=";
-const youtube = "https://www.youtube.com/results?search_query=";
-const bing = "https://www.bing.com/search?q=";
-const wikipedia = "https://pt.wikipedia.org/wiki/";
-const github = "https://github.com/search?q=";
-const stackoverflow = "https://pt.stackoverflow.com/search?q=";
-const imagens = "https://www.google.com.br/images?q=";
-const imdb = "https://www.imdb.com/find?ref_=nv_sr_fn&q="
-
-
-
-
-// const pesquisa = (site) => {
-//     console.log("pesquisa("+site+")");
-//     const search = get_search();
-//     if (search !== "") {
-//         const address = site + toInternet(search);
-//         console.log("Pesquisando: \"" + search + "\"\n" + address);
-//         // window.location.replace(address);      // não retorna pra pagina
-//         // window.location.href = address;        // retorna pra pagina mas não da pra usar o botão do meio do mouse
-//         window.open(address)                    // abre somente em nova guia
-//         return true;
-//     }
-//     return false;
-// }
