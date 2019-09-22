@@ -23,16 +23,16 @@
 
 - [x] Criar um objeto com os sites que inclua nome, descrição e endereço 1 e 2
 
-- [ ] Adicionar algumas paginas importantes
+- [X] Adicionar algumas paginas importantes
     - [X] duck duck go
     - [X] ecosia
 
 - [X] Melhorar a aparência do header
 
-- [ ] Incrementar o header
-    - [ ] Histórico
+- [X] Incrementar o header
+    - [X] Histórico
     - [X] Configurar - Sites
     - [X] Sobre mim - Eu
-        - [ ] Adicionar redes sociais
-        - [ ] Adicionar links
+        - [X] Adicionar redes sociais
+        - [X] Adicionar links
     - [X] Entre em contato - form
