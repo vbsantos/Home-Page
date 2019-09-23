@@ -48,3 +48,5 @@
     - [ ] Limpar cache (?)
 
 - [X] Arrumar os números do histórico pra ter 2 digitos sempre
+
+- [ ] Histórico como aba principal
