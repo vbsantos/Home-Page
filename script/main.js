@@ -1,4 +1,4 @@
-let sites = [
+var sites = [
     { id: 0, name: "Google", description: "Pesquisa qualquer coisa", link: ["https://www.google.com/", "https://www.google.com/search?q="], icon: "img/icon_google.png", active: true },
     { id: 1, name: "Google Translator", description: "Traduz qualquer coisa", link: ["https://translate.google.com/", "https://translate.google.com/#auto/pt/"], icon: "img/icon_translator.png", active: true },
     { id: 2, name: "YouTube", description: "Pesquisa vídeos", link: ["https://www.youtube.com/", "https://www.youtube.com/results?search_query="], icon: "img/icon_youtube.png", active: true },
@@ -36,7 +36,7 @@ const getTime = () => {
 const addToHistory = (nome, search, address, time=getTime()) => {
     // const time = getTime();
     const string = "[" + time + "] " + nome + ": \"" + search + "\"";       
-    historico = historico || [];
+    //historico = historico || [];
     historico.push({
         when: time,
         where: nome,
@@ -149,14 +149,14 @@ const makeSideMenuItem = (site) => {
 
 const updateHistory = () => {
     const temp = localStorage.getItem("history");
-    if (temp != "") {
+    if (temp != null) {
         historico = JSON.parse(temp);
     }
 }
 
 const updateConfig = () => {
     const temp = localStorage.getItem("config");
-    if (temp != "") {
+    if (temp != null) {
         sites = JSON.parse(temp);
     }
 }
