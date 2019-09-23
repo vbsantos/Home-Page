@@ -1,4 +1,4 @@
-const sites = [
+let sites = [
     { id: 0, name: "Google", description: "Pesquisa qualquer coisa", link: ["https://www.google.com/", "https://www.google.com/search?q="], icon: "img/icon_google.png", active: true },
     { id: 1, name: "Google Translator", description: "Traduz qualquer coisa", link: ["https://translate.google.com/", "https://translate.google.com/#auto/pt/"], icon: "img/icon_translator.png", active: true },
     { id: 2, name: "YouTube", description: "Pesquisa vídeos", link: ["https://www.youtube.com/", "https://www.youtube.com/results?search_query="], icon: "img/icon_youtube.png", active: true },
@@ -13,10 +13,7 @@ const sites = [
     { id: 11, name: "Duck Duck Go", description: "Pesquisa qualquer coisa discretamente", link: ["https://duckduckgo.com", "https://duckduckgo.com/?q="], icon: "img/icon_duckduckgo.png", active: true }
 ];
 
-const historico = [
-    { when: "teste1", what: "teste3", where: "teste2"},
-    { when: "teste4", what: "teste6", where: "teste5"}
-]
+var historico = new Array(); //{when: "time", where: "nome", what: "search", how: "address"}
 
 const search_bar = document.getElementById("form");
 
@@ -29,17 +26,24 @@ const toInternet = (common_string) => {
 }
 
 const getTime = () => {
-    // NEW DATE GETHOUR GETMIN . TO STRING
     const now = new Date();
     const hor = now.getHours();
     const min = now.getMinutes();
-    // const sec = now.getSeconds();
-    return hor + ":" + min;
+    const sec = now.getSeconds();
+    return hor + ":" + min + ":" + sec;
 }
 
-const addToHistory = (nome, search, address) => {
-    const time = getTime();
-    const string = "[" + time + "] " + nome + ": \"" + search + "\"";
+const addToHistory = (nome, search, address, time=getTime()) => {
+    // const time = getTime();
+    const string = "[" + time + "] " + nome + ": \"" + search + "\"";       
+    historico = historico || [];
+    historico.push({
+        when: time,
+        where: nome,
+        what: search,
+        how: address
+    });
+    localStorage.setItem("history", JSON.stringify(historico));
 
     const menu = document.getElementById("sidemenu2");
     const item = document.createElement("div");
@@ -76,6 +80,7 @@ const setAsSearchOption = (site) => {
         else {
             var address = site["link"][1] + toInternet(search);
             addToHistory(site["name"], search, address);
+            search_bar.value = "";
         }
         if (e.which == 1) {
             window.location.href = address;
@@ -91,6 +96,10 @@ const removeSearchOption = (site) => {
     const searchOption = document.getElementById("si" + site["id"]);
     searchIcons.removeChild(searchOption);
     site["active"] = false;
+}
+
+const createHistoryLink = (historydata) => {
+    addToHistory(historydata["where"], historydata["what"], historydata["how"], historydata["when"]);
 }
 
 const makeSideMenuItem = (site) => {
@@ -120,11 +129,14 @@ const makeSideMenuItem = (site) => {
             if (!cb.checked) {
                 // console.log("ATIVOU "+site["name"]);
                 setAsSearchOption(site);
+                site["active"] = true;
             }
             else {
                 // console.log("DESATIVOU "+site["name"]);
                 removeSearchOption(site);
+                site["active"] = false;
             }
+            localStorage.setItem("config", JSON.stringify(sites));
         }
     });
     h.appendChild(title);
@@ -135,10 +147,37 @@ const makeSideMenuItem = (site) => {
     menu.appendChild(item);
 }
 
+const updateHistory = () => {
+    const temp = localStorage.getItem("history");
+    if (temp != "") {
+        historico = JSON.parse(temp);
+    }
+}
+
+const updateConfig = () => {
+    const temp = localStorage.getItem("config");
+    if (temp != "") {
+        sites = JSON.parse(temp);
+    }
+}
+
+const limpaHistorico = () => {
+    localStorage.setItem("history", null);
+}
+
 // ##############################################
 
-search_bar.focus();
+// PEGA TODO O HISTÓRICO DE DENTRO DA CACHE
+//updateHistory()
 
+// PEGA TODA A CONFIGURAÇÃO DE DENTRO DA CACHE
+updateConfig()
+
+// CRIA ABA HISTÓRICO
+//historico.forEach(createHistoryLink);
+
+// CRIA ABA CONFIG E BOTÕES DE PESQUISA
 sites.forEach(makeSideMenuItem);
 
-getTime();
+// FOCA NA BARRA DE PESQUISA
+search_bar.focus();
