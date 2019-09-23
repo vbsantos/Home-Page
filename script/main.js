@@ -1,4 +1,4 @@
-var sites = [
+let sites = [
     { id: 0, name: "Google", description: "Pesquisa qualquer coisa", link: ["https://www.google.com/", "https://www.google.com/search?q="], icon: "img/icon_google.png", active: true },
     { id: 1, name: "Google Translator", description: "Traduz qualquer coisa", link: ["https://translate.google.com/", "https://translate.google.com/#auto/pt/"], icon: "img/icon_translator.png", active: true },
     { id: 2, name: "YouTube", description: "Pesquisa vídeos", link: ["https://www.youtube.com/", "https://www.youtube.com/results?search_query="], icon: "img/icon_youtube.png", active: true },
@@ -13,7 +13,7 @@ var sites = [
     { id: 11, name: "Duck Duck Go", description: "Pesquisa qualquer coisa discretamente", link: ["https://duckduckgo.com", "https://duckduckgo.com/?q="], icon: "img/icon_duckduckgo.png", active: true }
 ];
 
-var historico = new Array(); //{when: "time", where: "nome", what: "search", how: "address"}
+let historico = new Array(); //{when: "time", where: "nome", what: "search", how: "address"}
 
 const search_bar = document.getElementById("form");
 
@@ -56,6 +56,7 @@ const addToHistory = (nome, search, address) => {
         what: search,
         how: address
     }
+    historico = historico || [];
     historico.push(historyLink);
     localStorage.setItem("history", JSON.stringify(historico));
     createHistoryLink(historyLink);
@@ -147,14 +148,14 @@ const makeSideMenuItem = (site) => {
 }
 
 const updateHistory = () => {
-    const temp = localStorage.getItem("history");
+    let temp = localStorage.getItem("history");
     if (temp) {
         historico = JSON.parse(temp);
     }
 }
 
 const updateConfig = () => {
-    const temp = localStorage.getItem("config");
+    let temp = localStorage.getItem("config");
     if (temp) {
         sites = JSON.parse(temp);
     }
@@ -179,4 +180,6 @@ search_bar.focus();
 updateHistory();
 
 // CRIA ABA HISTÓRICO
-historico.forEach(createHistoryLink);
+if(historico) {
+    historico.forEach(createHistoryLink);
+}
