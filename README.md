@@ -1,9 +1,5 @@
 # Trabalho da CompAct Jr.
 
-## Bugs:
-
-- [ ] Histórico na cache do navegador ta corrompendo.
-
 ## Ideias:
 
 - [X] Fazer mais responsivo, podendo ser utilizado em celular

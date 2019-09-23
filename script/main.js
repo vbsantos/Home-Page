@@ -33,23 +33,13 @@ const getTime = () => {
     return hor + ":" + min + ":" + sec;
 }
 
-const addToHistory = (nome, search, address, time=getTime()) => {
-    // const time = getTime();
-    const string = "[" + time + "] " + nome + ": \"" + search + "\"";       
-    //historico = historico || [];
-    historico.push({
-        when: time,
-        where: nome,
-        what: search,
-        how: address
-    });
-    localStorage.setItem("history", JSON.stringify(historico));
-
+const createHistoryLink = (historydata) => {
+    const string = "[" + historydata["when"] + "] " + historydata["where"] + ": \"" + historydata["what"] + "\"";
     const menu = document.getElementById("sidemenu2");
     const item = document.createElement("div");
     // item.classList.add("side-menu-item");
     const link = document.createElement("a");
-    link.href = address;
+    link.href = historydata["how"];
     const text = document.createElement("p");
     const content = document.createTextNode(string);
 
@@ -57,6 +47,18 @@ const addToHistory = (nome, search, address, time=getTime()) => {
     link.appendChild(text);
     item.appendChild(link);
     menu.appendChild(item);
+}
+
+const addToHistory = (nome, search, address) => {
+    const historyLink = {
+        when: getTime(),
+        where: nome,
+        what: search,
+        how: address
+    }
+    historico.push(historyLink);
+    localStorage.setItem("history", JSON.stringify(historico));
+    createHistoryLink(historyLink);
 }
 
 const setAsSearchOption = (site) => {
@@ -74,11 +76,12 @@ const setAsSearchOption = (site) => {
     searchIcons.appendChild(slot);
     slot.addEventListener("mousedown", function (e) {
         const search = get_search();
+        let address = "";
         if (search == "") {
-            var address = site["link"][0];
+            address = site["link"][0];
         }
         else {
-            var address = site["link"][1] + toInternet(search);
+            address = site["link"][1] + toInternet(search);
             addToHistory(site["name"], search, address);
             search_bar.value = "";
         }
@@ -96,10 +99,6 @@ const removeSearchOption = (site) => {
     const searchOption = document.getElementById("si" + site["id"]);
     searchIcons.removeChild(searchOption);
     site["active"] = false;
-}
-
-const createHistoryLink = (historydata) => {
-    addToHistory(historydata["where"], historydata["what"], historydata["how"], historydata["when"]);
 }
 
 const makeSideMenuItem = (site) => {
@@ -161,23 +160,23 @@ const updateConfig = () => {
     }
 }
 
-const limpaHistorico = () => {
+const clearHistory = () => {
     localStorage.setItem("history", null);
 }
 
 // ##############################################
 
-// PEGA TODO O HISTÓRICO DE DENTRO DA CACHE
-//updateHistory()
-
 // PEGA TODA A CONFIGURAÇÃO DE DENTRO DA CACHE
 updateConfig()
-
-// CRIA ABA HISTÓRICO
-//historico.forEach(createHistoryLink);
 
 // CRIA ABA CONFIG E BOTÕES DE PESQUISA
 sites.forEach(makeSideMenuItem);
 
 // FOCA NA BARRA DE PESQUISA
 search_bar.focus();
+
+// PEGA TODO O HISTÓRICO DE DENTRO DA CACHE
+updateHistory();
+
+// CRIA ABA HISTÓRICO
+historico.forEach(createHistoryLink);
