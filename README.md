@@ -36,15 +36,15 @@
         - [X] Adicionar redes sociais
         - [X] Adicionar links
 
-- [ ] Apagar barra de pesquisa no momento que pesquisar
+- [X] Apagar barra de pesquisa no momento que pesquisar
     - [ ] Adicionar um botão que limpa a barra(?)
 
-- [ ] Salvar dados na cache do navegador
+- [X] Salvar dados na cache do navegador
     - [X] Procurar se há dados salvos no momento que entrar no site
-    - [ ] Histórico
+    - [X] Histórico
     - [X] Configurações
 
 - [ ] Adicionar botão pra limpar histórico
     - [ ] Limpar cache (?)
 
-- [ ] Arrumar os números do histórico pra ter 2 digitos sempre <!--("0" + myNumber).slice(-2)--> 
+- [X] Arrumar os números do histórico pra ter 2 digitos sempre

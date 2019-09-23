@@ -30,7 +30,7 @@ const getTime = () => {
     const hor = now.getHours();
     const min = now.getMinutes();
     const sec = now.getSeconds();
-    return hor + ":" + min + ":" + sec;
+    return ("0" + hor).slice(-2) + ":" + ("0" + min).slice(-2) + ":" + ("0" + sec).slice(-2);
 }
 
 const createHistoryLink = (historydata) => {
