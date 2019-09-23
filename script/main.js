@@ -149,14 +149,14 @@ const makeSideMenuItem = (site) => {
 
 const updateHistory = () => {
     const temp = localStorage.getItem("history");
-    if (temp != null) {
+    if (temp) {
         historico = JSON.parse(temp);
     }
 }
 
 const updateConfig = () => {
     const temp = localStorage.getItem("config");
-    if (temp != null) {
+    if (temp) {
         sites = JSON.parse(temp);
     }
 }
