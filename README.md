@@ -1,5 +1,9 @@
 # Trabalho da CompAct Jr.
 
+## Bugs:
+
+- [ ] Histórico na cache do navegador ta corrompendo.
+
 ## Ideias:
 
 - [X] Fazer mais responsivo, podendo ser utilizado em celular
@@ -15,7 +19,6 @@
 
 - [X] Adicionar menu para adicionar ou remover botões
     - [X] Checklist
-    - [ ] Categorias
     - [X] Adicionar a descrição de cada site
         - [X] Hover/Balão
 
@@ -32,7 +35,20 @@
 - [X] Incrementar o header
     - [X] Histórico
     - [X] Configurar - Sites
+    - [X] Entre em contato - form
     - [X] Sobre mim - Eu
         - [X] Adicionar redes sociais
         - [X] Adicionar links
-    - [X] Entre em contato - form
+
+- [ ] Apagar barra de pesquisa no momento que pesquisar
+    - [ ] Adicionar um botão que limpa a barra(?)
+
+- [ ] Salvar dados na cache do navegador
+    - [X] Procurar se há dados salvos no momento que entrar no site
+    - [ ] Histórico
+    - [X] Configurações
+
+- [ ] Adicionar botão pra limpar histórico
+    - [ ] Limpar cache (?)
+
+- [ ] Arrumar os números do histórico pra ter 2 digitos sempre <!--("0" + myNumber).slice(-2)--> 
