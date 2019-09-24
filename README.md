@@ -49,6 +49,8 @@
 
 - [X] Arrumar os números do histórico pra ter 2 digitos sempre
 
-- [ ] Histórico como aba principal
+- [X] Histórico como aba principal
 
-- [ ] Arrumar a aba de contato
+- [X] Arrumar a aba de contato
+
+- [ ] Arrumar backend pra realmente fazer contato
