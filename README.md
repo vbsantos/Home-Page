@@ -50,3 +50,5 @@
 - [X] Arrumar os números do histórico pra ter 2 digitos sempre
 
 - [ ] Histórico como aba principal
+
+- [ ] Arrumar a aba de contato
