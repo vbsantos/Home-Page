@@ -35,10 +35,10 @@
 							<li id="aba1" class="nav-item">
 								<p class="nav-link">Configurar</p>	<!-- LINK DA NAVBAR -->
 							</li>
-							<li id="aba2" class="nav-item">
+							<li id="aba2" class="nav-item active">
 								<p class="nav-link">Histórico</p>		<!-- LINK DA NAVBAR -->
 							</li>
-							<li id="aba3" class="nav-item active">
+							<li id="aba3" class="nav-item">
 								<p class="nav-link">Sobre mim</p>		<!-- LINK DA NAVBAR -->
 							</li>
 							<li id="aba4" class="nav-item">
@@ -53,10 +53,10 @@
 			<div id="sidemenu1" class="menu" style="display: none;">
 				<!-- ABA DE CONFIGURAÇÃO -->
 			</div>
-			<div id="sidemenu2" class="menu" style="display: none;">
+			<div id="sidemenu2" class="menu" style="display: block;">
 				<!-- ABA DE HISTÓRICO -->
 			</div>
-			<div id="sidemenu3" class="menu" style="display: block;" >	<!-- ABA DE SOBRE -->
+			<div id="sidemenu3" class="menu" style="display: none;" >	<!-- ABA DE SOBRE -->
 				<img class="foto_lateral" src="img/eu.png" alt="">
 				<h2>Vinícius Bohrer</h2>
 				<p>
@@ -81,12 +81,13 @@
 				</div>
 			</div>
 			<div id="sidemenu4" class="menu" style="display: none;">	<!-- ABA DE CONTATO -->
-				<img class="foto_lateral" src="img/contato.png" alt="">
-				<input class="form-control" type="text" placeholder="Nome">
-				<input class="form-control" type="email" placeholder="Email">
-				<textarea class="form-control" placeholder="Mensagem"></textarea>
-				<br><br>
-				<button type="button" class="btn btn-dark">Enviar</button>
+				<img class="foto_lateral" src="img/contato.png" alt="planeta">
+				<form method="POST" action="/php/contato.php">
+					<input class="form-control" name="nome" type="text" placeholder="Nome">
+					<input class="form-control" name="email" type="email" placeholder="E-mail">
+					<textarea class="form-control" name="mensagem" type="" placeholder="Mensagem"></textarea>
+					<button class="form-control btn" type="submit">Enviar</button>
+				</form>
 			</div>
 
 			<!-- TOGGLE MENU ICON -->
@@ -125,9 +126,9 @@
 		crossorigin="anonymous"></script>
 
 	<!-- MEUS SCRIPTS -->
-	<script src="script/main.js"></script>
-	<script src="script/menu.js"></script>
-	<script src="script/navbar.js"></script>
+	<script src="javascript/main.js"></script>
+	<script src="javascript/menu.js"></script>
+	<script src="javascript/navbar.js"></script>
 </body>
 
 </html>

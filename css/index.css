@@ -256,7 +256,7 @@ header .navbar {
 
 #sidemenu4 button {
 	width: 50%;
-	margin: 0 0 0 25%;
+	margin: 15% 0 0 25%;
 	color: white;
 	background-color: #111;
 	border-style: none;
@@ -265,6 +265,6 @@ header .navbar {
 
 #sidemenu4 button:hover {
 	width: 52%;
-	margin: 0 0 0 24%;
+	margin: 15% 0 0 24%;
 	box-shadow: 0 0 5px black;
 }
