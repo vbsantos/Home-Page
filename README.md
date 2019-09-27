@@ -1,4 +1,4 @@
-# Trabalho da CompAct Jr.
+# Trabalho 1 da seletiva da CompAct Jr.
 
 ## Ideias:
 
@@ -54,3 +54,5 @@
 - [X] Arrumar a aba de contato
 
 - [ ] Arrumar backend pra realmente fazer contato
+
+- [ ] Colocar no servidor do Raspberry Pi
