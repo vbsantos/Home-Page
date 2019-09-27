@@ -16,10 +16,10 @@ img {
 }
 
 #centro {
-	width: 80%;
+	width: 70%;
 	height: 75vh;
-	margin: 0% 10% 0% 10%;
-	padding-top: 35vh; 				/*MUDAR*/
+	margin: 0% 15% 0% 15%;
+	padding-top: 20vw; 				/*MUDAR*/
 	/* align-items: center; */
 	/* justify-items: center; */
 }
@@ -165,6 +165,7 @@ header .navbar {
 #sidemenu1 a {
 	text-decoration: none;
 	color: white;
+	font-weight: bold;
 }
 
 /* HISTÓRICO */
@@ -183,6 +184,7 @@ header .navbar {
 #sidemenu2 a {
 	text-decoration: none;
 	color: white;
+	font-weight: bold;
 }
 
 /* SOBRE MIM */
@@ -225,6 +227,7 @@ header .navbar {
 #sidemenu3 a {
 	text-decoration: none;
 	color: white;
+	font-weight: bold;
 }
 
 /* CONTATO */
