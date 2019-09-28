@@ -37,8 +37,8 @@
     //$Mailer->Port = 3306;
 
     //Dados do usuário do e-mail de saída
-    $Mailer->Username = 'vbsanttos@gmail.com';
-    $Mailer->Password = 'vbsantos1510!';
+    $Mailer->Username = 'xxx@gmail.com';
+    $Mailer->Password = 'xxx!';
 
     //E-mail remetente
     $Mailer->From = $email;
