@@ -53,6 +53,7 @@
 
 - [X] Arrumar a aba de contato
 
-- [ ] Arrumar backend pra realmente fazer contato
+- [X] Arrumar backend pra realmente fazer contato
 
 - [ ] Colocar no servidor do Raspberry Pi
+    - [ ] Aprender como muda o domínio
