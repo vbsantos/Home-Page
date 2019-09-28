@@ -53,7 +53,7 @@
 
     //Destinatário
     $Mailer->AddReplyTo($email);
-    $Mailer->AddAddress('vbsanttos@gmail.com');
+    $Mailer->AddAddress('xxx@gmail.com');
 
     if($Mailer->Send()) {
         echo "E-mail enviado com sucesso!";
