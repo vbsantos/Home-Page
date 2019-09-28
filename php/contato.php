@@ -4,10 +4,10 @@
     $email = $_POST["email"];
     $mensagem = $_POST["mensagem"];
 
-    // A PARTIR DAQUI SEGUINDO O 
-    //  GITHUB https://github.com/PHPMailer/PHPMailer 
-    //  E O VÍDEO https://www.youtube.com/watch?v=gor2j4muG8A
-    // E VÁRIAS PÁGIAS DO STACK OVERFLOW JUNTAMENTE COM https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+    // A PARTIR DAQUI SEGUINDO O  GITHUB https://github.com/PHPMailer/PHPMailer 
+    // E https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+    // E O VÍDEO https://www.youtube.com/watch?v=gor2j4muG8A
+    // JUNTAMENTE COM VÁRIAS PÁGINAS DO STACK OVERFLOW
 
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
@@ -29,16 +29,12 @@
     $Mailer->SMTPAuth = true;
     $Mailer->SMTPSecure = 'ssl';
 
-    //Nome do servidor
+    //Nome do servidor e Porta de saída do e-mail
     $Mailer->Host = 'tls://smtp.gmail.com:587';
-    //$Mailer->Port = 587;
-
-    //Porta de saída do e-mail
-    //$Mailer->Port = 3306;
 
     //Dados do usuário do e-mail de saída
     $Mailer->Username = 'xxx@gmail.com';
-    $Mailer->Password = 'xxx!';
+    $Mailer->Password = 'xxx';
 
     //E-mail remetente
     $Mailer->From = $email;
@@ -64,5 +60,7 @@
     } else {
         echo "E-mail NÃO enviado com sucesso!<br>" . $Mailer->ErrorInfo;
     }
+
+    header("location:../index.html");
 
 ?>
