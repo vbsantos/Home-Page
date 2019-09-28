@@ -82,10 +82,10 @@
 			</div>
 			<div id="sidemenu4" class="menu" style="display: none;">	<!-- ABA DE CONTATO -->
 				<img class="foto_lateral" src="img/contato.png" alt="planeta">
-				<form method="POST" action="php/contato.php">
-					<input class="form-control" name="nome" type="text" placeholder="Nome">
-					<input class="form-control" name="email" type="email" placeholder="E-mail">
-					<textarea class="form-control" name="mensagem" type="" placeholder="Mensagem"></textarea>
+				<form method="POST" action="php/contato.php" autocomplete="off">
+					<input class="form-control" name="nome" type="text" placeholder="Nome" required>
+					<input class="form-control" name="email" type="email" placeholder="E-mail" required>
+					<textarea class="form-control" name="mensagem" type="" placeholder="Mensagem" required></textarea>
 					<button class="form-control btn" type="submit">Enviar</button>
 				</form>
 			</div>
