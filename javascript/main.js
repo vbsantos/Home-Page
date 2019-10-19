@@ -40,13 +40,15 @@ const createHistoryLink = (historydata) => {
     // item.classList.add("side-menu-item");
     const link = document.createElement("a");
     link.href = historydata["how"];
+    link.title = historydata["where"] + ": " + historydata["what"];
     const text = document.createElement("p");
     const content = document.createTextNode(string);
 
     text.appendChild(content);
     link.appendChild(text);
     item.appendChild(link);
-    menu.appendChild(item);
+    menu.insertBefore(item, menu.childNodes[0]);
+    //menu.appendChild(item); // adiciona em baixo, tem que adicionar em cima -> list.insertBefore(newItem, list.childNodes[0]);
 }
 
 const addToHistory = (nome, search, address) => {
