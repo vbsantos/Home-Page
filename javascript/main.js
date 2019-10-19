@@ -84,7 +84,7 @@ const setAsSearchOption = (site) => {
         else {
             address = site["link"][1] + toInternet(search);
             addToHistory(site["name"], search, address);
-            search_bar.value = "";
+            //search_bar.value = "";
         }
         if (e.which == 1) {
             window.location.href = address;
