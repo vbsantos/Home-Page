@@ -6,10 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+	<!-- APARECE NA ABA -->
 	<title>Start Page</title>
 	<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
-	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet"> <!-- GOOGLE FONTS -->
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -19,6 +21,7 @@
 <body>
 	<div class="wrapper">
 		<div class="canvas">
+
 			<!-- HIDDEN HEADER -->
 			<header>
 				<nav class="navbar navbar-expand-lg navbar-dark">
@@ -30,25 +33,26 @@
 						<span class="navbar-toggler-icon"></span>
 					</button>
 
+					<!-- LINKS DA NAVBAR -->
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<ul class="navbar-nav mr-auto">
 							<li id="aba1" class="nav-item">
-								<p class="nav-link">Configurar</p>	<!-- LINK DA NAVBAR -->
+								<p class="nav-link">Configurar</p>
 							</li>
 							<li id="aba2" class="nav-item active">
-								<p class="nav-link">Histórico</p>		<!-- LINK DA NAVBAR -->
+								<p class="nav-link">Histórico</p>
 							</li>
 							<li id="aba3" class="nav-item">
-								<p class="nav-link">Sobre mim</p>		<!-- LINK DA NAVBAR -->
+								<p class="nav-link">Sobre mim</p>
 							</li>
 							<li id="aba4" class="nav-item">
-								<p class="nav-link">Contato</p>		<!-- LINK DA NAVBAR -->
+								<p class="nav-link">Contato</p>
 							</li>
 						</ul>
 					</div>
 				</nav>
 			</header>
-			
+
 			<!-- HIDDEN MENUS -->
 			<div id="sidemenu1" class="menu" style="display: none;">
 				<!-- ABA DE CONFIGURAÇÃO -->
@@ -56,14 +60,19 @@
 			<div id="sidemenu2" class="menu" style="display: block;">
 				<!-- ABA DE HISTÓRICO -->
 			</div>
-			<div id="sidemenu3" class="menu" style="display: none;" >	<!-- ABA DE SOBRE -->
+			<div id="sidemenu3" class="menu" style="display: none;">
+				<!-- ABA DE SOBRE -->
 				<img class="foto_lateral" src="img/eu.png" alt="">
 				<h2>Vinícius Bohrer</h2>
 				<p>
-					Estudante do 9º semestre de Engenharia de Computação da Universidade 
-					Federal de Santa Maria (<a href="https://www.ufsm.br/">UFSM</a>), Técnico em Eletrotécnica pelo Colégio
-					Técnico Industrial de Santa Maria (<a href="https://www.ufsm.br/unidades-universitarias/ctism/">CTISM</a>), bolsista no Grupo de Redes
-					e Computação Aplicada (<a href="http://coral.ufsm.br/greca/index.php">GRECA</a>) e trainee na <a href="https://www.compactjr.com/">CompAct Jr</a>.
+					Estudante do 9º semestre de Engenharia de Computação da Universidade
+					Federal de Santa Maria (<a href="https://www.ufsm.br/">UFSM</a>), Técnico em Eletrotécnica pelo
+					Colégio
+					Técnico Industrial de Santa Maria (<a
+						href="https://www.ufsm.br/unidades-universitarias/ctism/">CTISM</a>),
+					bolsista no Grupo de Redes
+					e Computação Aplicada (<a href="http://coral.ufsm.br/greca/index.php">GRECA</a>) e trainee na <a
+						href="https://www.compactjr.com/">CompAct Jr</a>.
 				</p>
 				<div class="social row">
 					<div class="col-sm">
@@ -80,7 +89,8 @@
 					</div>
 				</div>
 			</div>
-			<div id="sidemenu4" class="menu" style="display: none;">	<!-- ABA DE CONTATO -->
+			<div id="sidemenu4" class="menu" style="display: none;">
+				<!-- ABA DE CONTATO -->
 				<img class="foto_lateral" src="img/contato.png" alt="planeta">
 				<form method="POST" action="php/contato.php" autocomplete="off">
 					<input class="form-control" name="nome" type="text" placeholder="Nome" required>
@@ -111,8 +121,6 @@
 			</footer>
 		</div>
 	</div>
-
-
 
 	<!-- BOOTSTRAP SCRIPTS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

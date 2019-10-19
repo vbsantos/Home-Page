@@ -1,5 +1,7 @@
 <?php
 
+    require "personalinfo.php";
+    
     $nome = $_POST["nome"];
     $email = $_POST["email"];
     $mensagem = $_POST["mensagem"];
@@ -33,8 +35,8 @@
     $Mailer->Host = 'tls://smtp.gmail.com:587';
 
     //Dados do usuário do e-mail de saída
-    $Mailer->Username = 'xxx@gmail.com';
-    $Mailer->Password = 'xxx';
+    $Mailer->Username = constant("SITE_EMAIL");
+    $Mailer->Password = constant("SITE_EMAIL_PASSWORD");
 
     //E-mail remetente
     $Mailer->From = $email;
@@ -43,7 +45,7 @@
     $Mailer->FromName = $nome;
 
     //Assunto da mensagem
-    $Mailer->Subject = "Contato - Startpage";
+    $Mailer->Subject = constant("EMAIL_SUBJECT");
 
     //Conteúdo da mensagem
     $Mailer->Body = $mensagem;
@@ -53,14 +55,15 @@
 
     //Destinatário
     $Mailer->AddReplyTo($email);
-    $Mailer->AddAddress('xxx@gmail.com');
+    $Mailer->AddAddress(constant("SITE_EMAIL"));
 
     if($Mailer->Send()) {
         echo "E-mail enviado com sucesso!";
-    } else {
+    }
+    else {
         echo "E-mail NÃO enviado com sucesso!<br>" . $Mailer->ErrorInfo;
     }
 
-    header("location:../index.html");
+    //header("location:../index.html");
 
 ?>

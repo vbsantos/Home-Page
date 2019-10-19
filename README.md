@@ -1,51 +1,51 @@
-# Trabalho 1 da seletiva da CompAct Jr.
+# Seletiva da CompAct Jr. - Trabalho 1
 
-## Ideias:
+## Ideias
 
 - [X] Fazer mais responsivo, podendo ser utilizado em celular
-    - [X] Quando diminui a tela (tipo celular) os botões se dividem em várias linhas
-    - [X] Imagem de fundo não distorce
+  - [X] Quando diminui a tela (tipo celular) os botões se dividem em várias linhas
+  - [X] Imagem de fundo não distorce
 
 - [X] Clicar nos icones e não no botão que agora ta invisível
 
 - [X] Adicionar sombra da tela principal no menu e header
 
 - [X] Opção de abrir as pesquisas em novas guias
-    - [X] Esse tá difícil, talvez tenha que criar eventos pra cada clic diferente
+  - [X] Esse tá difícil, talvez tenha que criar eventos pra cada clic diferente
 
 - [X] Adicionar menu para adicionar ou remover botões
-    - [X] Checklist
-    - [X] Adicionar a descrição de cada site
-        - [X] Hover/Balão
+  - [X] Checklist
+  - [X] Adicionar a descrição de cada site
+    - [X] Hover/Balão
 
 - [x] Colocar os ícones de cada site
 
 - [x] Criar um objeto com os sites que inclua nome, descrição e endereço 1 e 2
 
 - [X] Adicionar algumas paginas importantes
-    - [X] duck duck go
-    - [X] ecosia
+  - [X] duck duck go
+  - [X] ecosia
 
 - [X] Melhorar a aparência do header
 
 - [X] Incrementar o header
-    - [X] Histórico
-    - [X] Configurar - Sites
-    - [X] Entre em contato - form
-    - [X] Sobre mim - Eu
-        - [X] Adicionar redes sociais
-        - [X] Adicionar links
+  - [X] Histórico
+  - [X] Configurar - Sites
+  - [X] Entre em contato - form
+  - [X] Sobre mim - Eu
+    - [X] Adicionar redes sociais
+    - [X] Adicionar links
 
 - [X] Apagar barra de pesquisa no momento que pesquisar
-    - [ ] Adicionar um botão que limpa a barra(?)
+  - [ ] Adicionar um botão que limpa a barra(?)
 
 - [X] Salvar dados na cache do navegador
-    - [X] Procurar se há dados salvos no momento que entrar no site
-    - [X] Histórico
-    - [X] Configurações
+  - [X] Procurar se há dados salvos no momento que entrar no site
+  - [X] Histórico
+  - [X] Configurações
 
 - [ ] Adicionar botão pra limpar histórico
-    - [ ] Limpar cache (?)
+  - [ ] Limpar cache (?)
 
 - [X] Arrumar os números do histórico pra ter 2 digitos sempre
 
@@ -56,4 +56,7 @@
 - [X] Arrumar backend pra realmente fazer contato
 
 - [ ] Colocar no servidor do Raspberry Pi
-    - [ ] Aprender como muda o domínio
+  - [ ] Aprender como muda o domínio
+
+- [ ] Adicionar mais sites
+  - [ ] [gen.lib.rus]("http://gen.lib.rus.ec/search.php?req=")
